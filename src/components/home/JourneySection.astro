@@ -4,281 +4,107 @@
 
 <section class="journey" id="journey">
   <div class="section-inner">
-    <div class="section-tag reveal">
-      The KIPROD Institutional Engagement Methodology
-    </div>
+<div class="section-tag reveal">Simplified Client Journey</div>
 
-<h2 class="section-heading reveal">
-  From <em>Understanding</em> to <em>Continuous Performance Improvement</em>
-</h2>
+    <h2 class="section-heading reveal">
+      Discover → Develop → <em>Sustain</em>
+    </h2>
 
-<p class="section-sub reveal">
-  Every institutional engagement follows a structured methodology that
-  begins with capability understanding, progresses through discovery and
-  assessment, and culminates in implementation and sustained performance
-  improvement.
-</p>
+    <p class="section-sub reveal">
+      The client-facing journey keeps the pathway simple: understand the institution, develop the right capability and support sustained execution. The full institutional methodology remains available in the methodology section.
+    </p>
 
-<div class="methodology-phases reveal">
+    <div class="methodology-phases reveal">
+      <div class="phase">
+        <div class="phase-header">
+          <div class="phase-number">01</div>
+          <div>
+            <h3>Discover</h3>
+            <p>Clarify institutional priorities, operating realities and capability gaps before prescribing solutions.</p>
+          </div>
+            </div>
+          </div>
 
-  <!-- PHASE 1 -->
 
-  <div class="phase">
+          <div class="phase">
+        <div class="phase-header">
+          <div class="phase-number">02</div>
+          <div>
+            <h3>Develop</h3>
+            <p>Translate evidence into learning, advisory and implementation pathways aligned to institutional needs.</p>
+          </div>
+            </div>
+          </div>
 
-    <div class="phase-header">
-
-      <div class="phase-number">01</div>
-
-      <div>
-
-        <h3>Discover</h3>
-
-        <p>Understand the institution before prescribing solutions.</p>
-
-      </div>
-
-    </div>
-
-    <div class="phase-grid">
-
-      <div class="journey-node">
-        <div class="node-dot">1</div>
-        <div class="node-code">ILCA</div>
-        <div class="node-title">
-          Institutional Learning & Capability Assessment
-        </div>
-      </div>
-
-      <div class="journey-node">
-        <div class="node-dot">2</div>
-        <div class="node-code">ICDF</div>
-        <div class="node-title">
-          Institutional Capability Discovery Framework
-        </div>
-      </div>
-
-      <div class="journey-node">
-        <div class="node-dot">3</div>
-        <div class="node-code">ICAR</div>
-        <div class="node-title">
-          Institutional Capability Assessment Report
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PHASE 2 -->
-
-  <div class="phase">
-
-    <div class="phase-header">
-
-      <div class="phase-number">02</div>
-
-      <div>
-
-        <h3>Develop</h3>
-
-        <p>Translate findings into capability and operational improvement.</p>
-
-      </div>
-
-    </div>
-
-    <div class="phase-grid">
-
-      <div class="journey-node">
-        <div class="node-dot">4</div>
-        <div class="node-code">ROADMAP</div>
-        <div class="node-title">
-          Learning & Advisory Roadmap
-        </div>
-      </div>
-
-      <div class="journey-node">
-        <div class="node-dot">5</div>
-        <div class="node-code">ACADEMY</div>
-        <div class="node-title">
-          Capability Development
-        </div>
-      </div>
-
-      <div class="journey-node">
-        <div class="node-dot">6</div>
-        <div class="node-code">RMS</div>
-        <div class="node-title">
-          Implementation & Operational Strengthening
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- PHASE 3 -->
-
-  <div class="phase">
-
-    <div class="phase-header">
-
-      <div class="phase-number">03</div>
-
-      <div>
-
-        <h3>Sustain</h3>
-
-        <p>Support continuous institutional performance and governance visibility.</p>
-
-      </div>
-
-    </div>
-
-    <div class="phase-grid">
-
-      <div class="journey-node wide">
-
-        <div class="node-dot">7</div>
-
-        <div class="node-code">
-          COMMAND CENTRE
-        </div>
-
-        <div class="node-title">
-          Continuous Performance Improvement
-        </div>
-
-        <div class="node-desc">
-
-          Executive intelligence, portfolio visibility,
-          governance monitoring and continuous ecosystem support.
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
+        <div class="phase">
+        <div class="phase-header">
+          <div class="phase-number">03</div>
+          <div>
+            <h3>Sustain</h3>
+            <p>Reinforce execution through performance visibility, monitoring and continuous improvement support.</p>
+          </div>
+            </div>
+</div>
+</div>
 </div>
 </section>
 
 <style>
-  .node-code {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gold-dark);
-    margin: 6px 0 10px;
-    font-weight: 600;
+  .methodology-phases {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 40px;
   }
 
-  .journey-footer {
-    margin-top: 42px;
-    text-align: center;
+  .phase {
+    padding: 28px;
+    background: white;
+    border: 1px solid rgba(201, 136, 42, 0.12);
+    border-radius: 18px;
   }
 
-  .journey-footer-line {
-    width: 120px;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
-    margin: 0 auto 18px;
+ .phase-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
   }
 
-  .journey-footer-text {
-    max-width: 920px;
-    margin: 0 auto;
+  .phase-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), #e7b14c);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
     font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-soft);
+    box-shadow: 0 10px 24px rgba(201, 136, 42, 0.22);
+    flex-shrink: 0;
   }
 
-  .journey-footer-text strong {
+  .phase-header h3 {
+    margin: 0;
+    font-size: 1.45rem;
     color: var(--navy);
-    font-weight: 600;
   }
 
-  @media (max-width: 768px) {
-    .journey-footer-text {
-      font-size: 0.95rem;
-      line-height: 1.75;
+  .phase-header p {
+    margin: 8px 0 0;
+    color: var(--text-soft);
+    line-height: 1.65;
+  }
+  @media (max-width: 900px) {
+    .methodology-phases {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 32px;
     }
-  }
-  .methodology-phases{
-  display:flex;
-  flex-direction:column;
-  gap:60px;
-  margin-top:60px;
 }
 
-.phase{
-  padding:40px;
-  background:white;
-  border:1px solid rgba(201,136,42,.12);
-  border-radius:22px;
-}
-
-.phase-header{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  margin-bottom:36px;
-}
-
-.phase-number{
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  background:linear-gradient(135deg,var(--gold),#e7b14c);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  font-size:1.2rem;
-  box-shadow:0 12px 28px rgba(201,136,42,.25);
-}
-
-.phase-header h3{
-  margin:0;
-  font-size:1.8rem;
-  color:var(--navy);
-}
-
-.phase-header p{
-  margin:6px 0 0;
-  color:var(--text-soft);
-}
-
-.phase-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
-}
-
-.journey-node{
-  background:#fff;
-  border:1px solid rgba(201,136,42,.15);
-  border-radius:18px;
-  padding:30px;
-  text-align:center;
-  transition:.35s;
-}
-
-.journey-node:hover{
-  transform:translateY(-6px);
-  box-shadow:0 18px 45px rgba(0,0,0,.08);
-}
-
-.journey-node.wide{
-  grid-column:1/-1;
-}
+.phase {
+      padding: 24px;
+    }
 </style>

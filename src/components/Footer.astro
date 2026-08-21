@@ -34,8 +34,8 @@ const links = [
           />
         </div>
 
-        <div class="footer-brand-desc">
-  KIPROD is an institutional engagement ecosystem helping financial institutions strengthen governance, capability, operational execution, and long-term performance through a structured seven-stage methodology.
+        <div class="footer-brand-desc" style="color:#f3f4f6;">
+  KIPROD is an institutional strengthening ecosystem helping financial institutions move from insight, through capability development, into execution and continuous performance improvement.
 </div>
 
       </div>
@@ -44,14 +44,19 @@ const links = [
 
       <div>
 
-        <div class="footer-col-title">
+        <div class="footer-col-title" style="color:#ffffff;">
           Explore
         </div>
 
         <ul class="footer-links">
           {links.map((l) => (
             <li>
-              <a href={l.href}>{l.label}</a>
+              <a
+  href={l.href}
+  style="color:#f3f4f6; text-decoration:none;"
+>
+  {l.label}
+</a>
             </li>
           ))}
         </ul>
@@ -63,38 +68,14 @@ const links = [
       <div>
 
         <div class="footer-col-title">
-          Institutional Engagement Journey
+          Client Journey
         </div>
 
-        <div class="footer-journey">
-
-<div>① Assessment (ILCA)</div>
-
-<span>↓</span>
-
-<div>② Discovery (ICDF)</div>
-
-<span>↓</span>
-
-<div>③ Assessment Report (ICAR)</div>
-
-<span>↓</span>
-
-<div>④ Capability Roadmap</div>
-
-<span>↓</span>
-
-<div>⑤ Academy</div>
-
-<span>↓</span>
-
-<div>⑥ RMS Implementation</div>
-
-<span>↓</span>
-
-<div>⑦ Command Centre</div>
-
-</div>
+        <div class="footer-journey footer-journey-simple">
+          <span>Discover</span>
+          <span>Develop</span>
+          <span>Sustain</span>
+        </div>
 
       </div>
 
@@ -106,7 +87,10 @@ const links = [
           Institution Types
         </div>
 
-        <div class="footer-badges">
+        <div
+  class="footer-badges"
+  style="color:#ffffff;"
+>
 
           <span>Banks</span>
 <span>SACCOs</span>
@@ -127,16 +111,16 @@ const links = [
 
     <div class="footer-cta">
 
-      <h3>
+      <h3 style="color:#ffffff;">
         Ready to Begin Your Institutional Journey?
       </h3>
 
-      <p>
-        Every engagement begins with understanding your institution's current capability. Through assessment, discovery, capability development, implementation, and continuous performance support, KIPROD provides a structured pathway to stronger institutional outcomes.
+      <p style="color:#f3f4f6;">
+        Every engagement begins with understanding your institution’s current priorities, capability gaps and operational realities before moving into targeted strengthening support.
       </p>
 
       <a href="/contact" class="btn-primary">
-        Start Institutional Capability Assessment →
+        Start Institutional Assessment →
       </a>
 
     </div>
@@ -145,11 +129,11 @@ const links = [
 
     <div class="footer-bottom">
 
-<div class="footer-copy">
+<div class="footer-copy" style="color:#d1d5db;">
 © 2026 KIPROD Institute. All Rights Reserved.
 </div>
 
-<div class="footer-markets">
+<div class="footer-markets" style="color:#facc15;">
 Governance • Capability Development • Executive Learning • Implementation • Institutional Intelligence
 </div>
 
@@ -157,4 +141,29 @@ Governance • Capability Development • Executive Learning • Implementation 
 
   </div>
 
+
 </footer>
+<style>
+  .footer-journey-simple,
+  .footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .footer-journey-simple span,
+  .footer-badges span {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .footer-journey-simple,
+    .footer-badges {
+      gap: 8px;
+    }
+  }
+</style>
