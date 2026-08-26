@@ -3476,6 +3476,115 @@ footer {
   text-align:center;
   
   }
+  /* Compact YouTube cards on the homepage: intentionally separate from the
+   full media-page cards so the homepage remains quick to scan. */
+.media-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.media-home .video-card {
+  border: 1px solid rgba(9, 34, 74, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(9, 34, 74, 0.08);
+}
+
+.media-home .video-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 24px 48px rgba(9, 34, 74, 0.14);
+}
+
+.media-home .video-thumb {
+  aspect-ratio: 16 / 7.5;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.media-home .video-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(9, 34, 74, 0.04) 28%, rgba(9, 34, 74, 0.7));
+  pointer-events: none;
+}
+
+.media-home .video-thumb img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-position: center;
+}
+
+.media-home .play-icon {
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  padding-left: 3px;
+  font-size: 20px;
+  background: var(--gold);
+  border: 2px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 22px rgba(7, 24, 45, 0.28);
+}
+
+.video-channel-label {
+  position: absolute;
+  z-index: 1;
+  top: 14px;
+  left: 14px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(9, 34, 74, 0.82);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.media-home .video-body {
+  padding: 20px 22px 22px;
+}
+
+.media-home .pill {
+  margin-bottom: 9px;
+  padding: 4px 8px;
+  font-size: 0.57rem;
+}
+
+.media-home .video-body h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.media-home .video-body p {
+  margin: 0;
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 980px) {
+  .media-preview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .media-preview-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 38px;
+  }
+
+  .media-home .video-thumb {
+    aspect-ratio: 16 / 8;
+  }
+}
   
   @media(max-width:980px){
 .media-grid{
