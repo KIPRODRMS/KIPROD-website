@@ -1,139 +1,212 @@
-<section class="why-kiprod">
+<section class="difference">
 
-    <div class="section-inner">
+  <div class="section-inner">
 
-        <div class="section-tag reveal">
-            Why KIPROD
+    <div class="difference-layout">
+
+      <div class="difference-intro reveal">
+
+        <div class="section-tag">
+          The KIPROD difference
         </div>
 
-        <h2 class="section-heading reveal">
-            Building Strong Institutions Through
-            <em>Knowledge, Governance & Capability</em>
+        <h2 class="section-heading">
+          Institutions rarely struggle because they lack
+          <em>training alone.</em>
         </h2>
 
-        <p class="section-sub reveal">
-            KIPROD supports financial institutions through an integrated
-            ecosystem of professional education, governance advisory,
-            digital learning, institutional research and strategic partnerships.
+      </div>
+
+
+      <div class="difference-copy reveal">
+
+        <p class="lead">
+          Institutional performance becomes difficult when
+          governance, capability, systems and execution operate
+          independently.
         </p>
-
-        <div class="why-grid">
-
-    <div class="why-card reveal">
-
-        <h3>Governance</h3>
 
         <p>
-            Strengthening institutional governance,
-            accountability and strategic oversight.
+          KIPROD connects these elements within one institutional
+          strengthening framework—helping organisations understand
+          where they are, identify what needs to change and build
+          the capability required to sustain improvement.
         </p>
+
+        <a
+          href="/methodology"
+          class="difference-link"
+        >
+          Explore Our Methodology →
+        </a>
+
+      </div>
 
     </div>
 
-    <div class="why-card reveal">
+
+    <div class="difference-points">
+
+      <div class="difference-point reveal">
+
+        <span>01</span>
+
+        <h3>Insight</h3>
+
+        <p>
+          Understand institutional priorities, capability,
+          governance and risk.
+        </p>
+
+      </div>
+
+
+      <div class="difference-point reveal">
+
+        <span>02</span>
 
         <h3>Capability</h3>
 
         <p>
-            Professional development programmes,
-            certifications and executive learning.
+          Build the knowledge, systems and institutional
+          capability required for improvement.
         </p>
 
-    </div>
+      </div>
 
-    <div class="why-card reveal">
 
-        <h3>Research</h3>
+      <div class="difference-point reveal">
+
+        <span>03</span>
+
+        <h3>Execution</h3>
 
         <p>
-            Practical publications,
-            industry insights
-            and executive intelligence.
+          Translate institutional priorities into practical
+          implementation and measurable improvement.
         </p>
 
-    </div>
-
-    <div class="why-card reveal">
-
-        <h3>Partnerships</h3>
-
-        <p>
-            Long-term institutional collaborations
-            supporting sustainable organisational growth.
-        </p>
+      </div>
 
     </div>
 
-</div>
-    </div>
+  </div>
 
 </section>
 
+
 <style>
 
-.why-kiprod{
+  .difference {
+    padding: 110px 0;
+    background: var(--cream);
+  }
 
-    padding:100px 0;
+  .difference-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+  }
 
-}
+  .difference-intro .section-heading {
+    margin-top: 24px;
+    max-width: 600px;
+  }
 
-.why-grid{
+  .difference-copy {
+    max-width: 590px;
+    padding-top: 34px;
+  }
 
-    display:grid;
+  .difference-copy p {
+    color: var(--muted);
+    line-height: 1.8;
+  }
 
-    grid-template-columns:repeat(4,1fr);
+  .difference-copy .lead {
+    margin-bottom: 24px;
+    color: var(--navy);
+    font-size: 1.35rem;
+    line-height: 1.6;
+  }
 
-    gap:28px;
+  .difference-link {
+    display: inline-flex;
+    margin-top: 26px;
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+  }
 
-    margin-top:60px;
+  .difference-link:hover {
+    color: var(--gold);
+  }
 
-}
+  .difference-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 75px;
+    border-top: 1px solid rgba(9,34,74,.15);
+  }
 
-.why-card{
+  .difference-point {
+    padding: 30px 30px 10px;
+    border-right: 1px solid rgba(9,34,74,.15);
+  }
 
-    background:white;
+  .difference-point:first-child {
+    padding-left: 0;
+  }
 
-    padding:35px;
+  .difference-point:last-child {
+    border-right: 0;
+  }
 
-    border-radius:10px;
+  .difference-point span {
+    color: var(--gold);
+    font: .7rem var(--font-mono);
+    letter-spacing: .1em;
+  }
 
-    border:1px solid rgba(196,136,42,.18);
+  .difference-point h3 {
+    margin: 16px 0 10px;
+    color: var(--navy);
+    font: 600 1.5rem var(--font-display);
+  }
 
-    transition:.3s;
+  .difference-point p {
+    color: var(--muted);
+    line-height: 1.7;
+  }
 
-}
+  @media(max-width:900px) {
 
-.why-card:hover{
+    .difference-layout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
 
-    transform:translateY(-6px);
+    .difference-copy {
+      padding-top: 0;
+    }
 
-    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    .difference-points {
+      grid-template-columns: 1fr;
+    }
 
-}
+    .difference-point,
+    .difference-point:first-child {
+      padding: 25px 0;
+      border-right: 0;
+      border-bottom: 1px solid rgba(9,34,74,.15);
+    }
 
-.why-card h3{
+    .difference-point:last-child {
+      border-bottom: 0;
+    }
 
-    color:#09224A;
-
-    margin-bottom:18px;
-
-}
-
-.why-card p{
-
-    line-height:1.8;
-
-    color:#5c6778;
-
-}
-
-@media(max-width:900px){
-
-.why-grid{
-
-
-}
-
-}
+  }
 
 </style>
