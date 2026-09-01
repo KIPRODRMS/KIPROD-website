@@ -1,19 +1,27 @@
-...
-...
+---
+import InsightGrid from "../InsightGrid.astro";
+
+const { posts = [] } = Astro.props;
+---
 
 <section class="about" id="insights" style="background: var(--cream)">
-    <div class="section-inner">
-      <div class="section-tag reveal">Insights</div>
-      <h2 class="section-heading reveal">Executive governance <em>intelligence</em></h2>
-      <p class="section-sub reveal">
-        Continuous thought leadership—governance perspectives, portfolio risk observations, and sector intelligence. Not
-        a generic blog. Decision-useful insight for institutional leaders.
-      </p>
+  <div class="section-inner">
 
-      <InsightGrid posts={featuredInsights} columns={3} />
-
-      <div style="margin-top: 28px" class="reveal">
-        <a href="/insights" class="btn-secondary">View all insights →</a>
-      </div>
+    <div class="section-tag reveal">
+      Insights
     </div>
-  </section>
+
+    <h2 class="section-heading reveal">
+      Executive governance <em>intelligence</em>
+    </h2>
+
+    <p class="section-sub reveal">
+      Continuous thought leadership—governance perspectives, portfolio risk
+      observations, and sector intelligence. Not a generic blog. Decision-useful
+      insight for institutional leaders.
+    </p>
+
+    <InsightGrid posts={posts} columns={3} />
+
+  </div>
+</section>
