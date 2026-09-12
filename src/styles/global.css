@@ -517,7 +517,7 @@ background .35s ease;
 
 .about{
   background:var(--white);
-  padding:110px 0;
+  padding:78px 0;
 }
 
 @media(max-width:768px){
@@ -588,7 +588,7 @@ background .35s ease;
 
 .solution {
   background: var(--navy);
-  padding: 110px 0;
+  padding: 78px 0;
   position: relative;
   overflow: hidden;
 }
@@ -608,7 +608,7 @@ background .35s ease;
   display: flex;
   align-items: stretch;
   gap: 0;
-  margin-top: 60px;
+  margin-top: 42px;
   border: 1px solid rgba(196, 136, 42, 0.2);
 }
 .model-step {
@@ -648,13 +648,13 @@ background .35s ease;
 
 .arms {
   background: var(--cream);
-  padding: 110px 0;
+  padding: 78px 0;
 }
 .arms-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 60px;
+  margin-top: 42px;
 }
 .arm-card {
   background: var(--white);
@@ -773,7 +773,7 @@ background .35s ease;
 
 .journey {
   background: var(--navy);
-  padding: 110px 0;
+  padding: 78px 0;
   position: relative;
   overflow: hidden;
 }
@@ -2377,7 +2377,7 @@ footer {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:32px;
-  margin-top:60px;
+  margin-top:42px;
 }
 
 .impact-card{
@@ -2851,7 +2851,7 @@ footer {
   
   }
   .trusted-action{
-    margin-top:60px;
+    margin-top:42px;
     display:flex;
     justify-content:center;
 }
@@ -2894,7 +2894,7 @@ footer {
   
   gap:28px;
   
-  margin-top:60px;
+  margin-top:42px;
   
   }
   
@@ -3017,7 +3017,7 @@ footer {
   
   gap:32px;
   
-  margin-top:60px;
+  margin-top:42px;
   
   }
   
@@ -3359,7 +3359,7 @@ footer {
   
   gap:34px;
   
-  margin-top:60px;
+  margin-top:42px;
   
   }
   
@@ -4645,7 +4645,7 @@ gap:34px;
         display:grid;
         grid-template-columns:repeat(5,1fr);
         gap:20px;
-        margin-top:50px;
+        margin-top:36px;
         }
         
         .category-card{
@@ -4671,7 +4671,7 @@ gap:34px;
           display:grid;
           grid-template-columns:repeat(3,1fr);
           gap:24px;
-          margin-top:50px;
+          margin-top:36px;
         }
         
         .gallery-item{
@@ -5004,7 +5004,7 @@ main{
 
                 .ecosystem-strip{
                 
-                margin-top:50px;
+                margin-top:36px;
                 
                 }
                 

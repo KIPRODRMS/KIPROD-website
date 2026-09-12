@@ -3,10 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 import HeroSection from "../components/home/HeroSection.astro";
 import WhyKiprod from "../components/home/WhyKiprod.astro";
-import JourneySection from "../components/home/JourneySection.astro";
 import EcosystemSection from "../components/home/EcosystemSection.astro";
 import ImpactGallery from "../components/home/ImpactGallery.astro";
-import TrustedInstitutions from "../components/TrustedInstitutions.astro";
 import InsightsSection from "../components/home/InsightsSection.astro";
 import FinalPositioningSection from "../components/home/FinalPositioningSection.astro";
 
@@ -21,19 +19,12 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   activePath="/"
 >
 
-  <!-- ======================================================
-       01 — HERO
-       ====================================================== -->
-
+  <!-- 01 — HERO -->
   <HeroSection />
 
 
-  <!-- ======================================================
-       02 — WHO WE SERVE
-       ====================================================== -->
-
+  <!-- 02 — WHO WE SERVE -->
   <section class="institutional-strip">
-
     <div class="section-inner">
 
       <div class="section-tag">
@@ -41,76 +32,31 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
       </div>
 
       <div class="institutional-list">
-
         <span>Banks</span>
         <span>SACCOs</span>
         <span>Microfinance</span>
         <span>Credit Providers</span>
         <span>Government & Regulators</span>
         <span>DFIs & Cooperatives</span>
-
       </div>
 
     </div>
-
   </section>
 
 
-  <!-- ======================================================
-       03 — THE KIPROD DIFFERENCE
-       ====================================================== -->
-
+  <!-- 03 — THE KIPROD DIFFERENCE -->
   <WhyKiprod />
 
 
-  <!-- ======================================================
-       04 — HOW KIPROD WORKS
-       ====================================================== -->
-
-  <JourneySection />
-
-
-  <!-- ======================================================
-       05 — THE KIPROD ECOSYSTEM
-       ====================================================== -->
-
+  <!-- 04 — THE KIPROD ECOSYSTEM -->
   <EcosystemSection />
 
 
-  <!-- ======================================================
-       06 — CAPABILITY IN ACTION
-       ====================================================== -->
-
-  <section class="capability-action">
-
-    <div class="section-inner">
-
-      <div class="section-tag reveal">
-        Capability in action
-      </div>
-
-      <h2 class="section-heading reveal">
-        From Institutional
-        <em>Insight to Action</em>
-      </h2>
-
-      <p class="section-sub reveal">
-        KIPROD brings institutional capability to life through
-        executive learning, institutional collaboration and
-        operational strengthening.
-      </p>
-
-    </div>
-
-  </section>
-
+  <!-- 05 — CAPABILITY IN ACTION -->
   <ImpactGallery />
 
 
-  <!-- ======================================================
-       07 — EXPERIENCE & INSTITUTIONAL RELEVANCE
-       ====================================================== -->
-
+  <!-- 06 — EXPERIENCE & INSTITUTIONAL RELEVANCE -->
   <section class="experience-section">
 
     <div class="section-inner">
@@ -129,7 +75,6 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
         governance, credit risk, capability development,
         institutional performance and strategic improvement.
       </p>
-
 
       <div class="experience-grid">
 
@@ -204,33 +149,24 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   </section>
 
 
-  <!-- ======================================================
-       08 — LATEST INSIGHTS
-       ====================================================== -->
-
+  <!-- 07 — LATEST INSIGHTS -->
   <InsightsSection
-    insights={featuredInsights}
+    posts={featuredInsights}
   />
 
 
-  <!-- ======================================================
-       09 — FINAL INSTITUTIONAL CTA
-       ====================================================== -->
-
+  <!-- 08 — FINAL INSTITUTIONAL CTA -->
   <FinalPositioningSection />
-
 
 </BaseLayout>
 
 
 <style>
 
-  /* ========================================================
-     WHO WE SERVE
-     ======================================================== */
+  /* WHO WE SERVE */
 
   .institutional-strip {
-    padding: 34px 0;
+    padding: 28px 0;
     background: var(--white);
     border-bottom: 1px solid rgba(9, 34, 74, .08);
   }
@@ -239,7 +175,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 32px;
   }
 
   .institutional-strip .section-tag {
@@ -251,51 +187,39 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 10px 28px;
+    gap: 8px 24px;
   }
 
   .institutional-list span {
     color: var(--navy);
-    font-size: .84rem;
+    font-size: .82rem;
     font-weight: 600;
   }
 
 
-  /* ========================================================
-     CAPABILITY INTRO
-     ======================================================== */
-
-  .capability-action {
-    padding: 100px 0 42px;
-    background: var(--cream);
-  }
-
-
-  /* ========================================================
-     EXPERIENCE
-     ======================================================== */
+  /* EXPERIENCE */
 
   .experience-section {
-    padding: 110px 0;
+    padding: 82px 0;
     background: var(--white);
   }
 
   .experience-grid {
     display: grid;
     grid-template-columns: 1.15fr .85fr;
-    gap: 70px;
-    margin-top: 58px;
+    gap: 56px;
+    margin-top: 44px;
     align-items: stretch;
   }
 
   .experience-content {
-    padding-right: 20px;
+    padding-right: 12px;
   }
 
   .experience-content h3 {
-    margin: 0 0 28px;
+    margin: 0 0 22px;
     color: var(--navy);
-    font: 600 1.65rem/1.2 var(--font-display);
+    font: 600 1.55rem/1.2 var(--font-display);
   }
 
   .capability-list {
@@ -305,11 +229,11 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   }
 
   .capability-list div {
-    padding: 18px 20px;
+    padding: 14px 18px;
     border-bottom: 1px solid rgba(9, 34, 74, .12);
     color: var(--navy);
-    font-size: .9rem;
-    line-height: 1.5;
+    font-size: .88rem;
+    line-height: 1.45;
   }
 
   .capability-list div:nth-child(odd) {
@@ -318,7 +242,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 
   .text-link {
     display: inline-flex;
-    margin-top: 28px;
+    margin-top: 24px;
     color: var(--navy);
     font-weight: 700;
     text-decoration: none;
@@ -332,7 +256,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 48px;
+    padding: 36px;
     background: var(--navy);
     color: var(--white);
   }
@@ -342,21 +266,19 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     font: 600 1rem/1 var(--font-mono);
     letter-spacing: .18em;
     text-transform: uppercase;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 
   .experience-proof p {
     max-width: 380px;
-    margin: 0 0 30px;
+    margin: 0 0 26px;
     color: rgba(255,255,255,.76);
-    font-size: 1.15rem;
-    line-height: 1.75;
+    font-size: 1.08rem;
+    line-height: 1.65;
   }
 
 
-  /* ========================================================
-     RESPONSIVE
-     ======================================================== */
+  /* RESPONSIVE */
 
   @media (max-width: 900px) {
 
@@ -365,7 +287,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     }
 
     .institutional-strip .section-tag {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .institutional-list {
@@ -374,12 +296,21 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 
     .experience-grid {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 36px;
     }
 
   }
 
+
   @media (max-width: 600px) {
+
+    .institutional-strip {
+      padding: 24px 0;
+    }
+
+    .institutional-list {
+      gap: 7px 18px;
+    }
 
     .capability-list {
       grid-template-columns: 1fr;
@@ -389,8 +320,12 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
       border-right: 0;
     }
 
+    .experience-section {
+      padding: 68px 0;
+    }
+
     .experience-proof {
-      padding: 34px;
+      padding: 30px;
     }
 
   }
