@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import HeroSection from "../components/home/HeroSection.astro";
@@ -14,16 +14,16 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 ---
 
 <BaseLayout
-  title="KIPROD – Strengthening Credit Risk. Building Resilient Institutions."
+  title="KIPROD â€“ Strengthening Credit Risk. Building Resilient Institutions."
   description="KIPROD helps financial institutions understand capability gaps, strengthen governance, develop institutional capability, and support continuous performance improvement."
   activePath="/"
 >
 
-  <!-- 01 — HERO -->
+  <!-- 01 â€” HERO -->
   <HeroSection />
 
 
-  <!-- 02 — WHO WE SERVE -->
+  <!-- 02 â€” WHO WE SERVE -->
   <section class="institutional-strip">
     <div class="section-inner">
 
@@ -44,19 +44,19 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   </section>
 
 
-  <!-- 03 — THE KIPROD DIFFERENCE -->
+  <!-- 03 â€” THE KIPROD DIFFERENCE -->
   <WhyKiprod />
 
 
-  <!-- 04 — THE KIPROD ECOSYSTEM -->
+  <!-- 04 â€” THE KIPROD ECOSYSTEM -->
   <EcosystemSection />
 
 
-  <!-- 05 — CAPABILITY IN ACTION -->
+  <!-- 05 â€” CAPABILITY IN ACTION -->
   <ImpactGallery />
 
 
-  <!-- 06 — EXPERIENCE & INSTITUTIONAL RELEVANCE -->
+  <!-- 06 â€” EXPERIENCE & INSTITUTIONAL RELEVANCE -->
   <section class="experience-section">
 
     <div class="section-inner">
@@ -116,7 +116,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
             href="/institute"
             class="text-link"
           >
-            Explore Institutional Experience →
+            Explore Institutional Experience â†’
           </a>
 
         </div>
@@ -137,7 +137,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
             href="/about"
             class="btn-secondary"
           >
-            About KIPROD →
+            About KIPROD â†’
           </a>
 
         </div>
@@ -149,13 +149,13 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   </section>
 
 
-  <!-- 07 — LATEST INSIGHTS -->
+  <!-- 07 â€” LATEST INSIGHTS -->
   <InsightsSection
     posts={featuredInsights}
   />
 
 
-  <!-- 08 — FINAL INSTITUTIONAL CTA -->
+  <!-- 08 â€” FINAL INSTITUTIONAL CTA -->
   <FinalPositioningSection />
 
 </BaseLayout>
@@ -200,15 +200,15 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   /* EXPERIENCE */
 
   .experience-section {
-    padding: 82px 0;
+    padding: 64px 0;
     background: var(--white);
   }
 
   .experience-grid {
     display: grid;
     grid-template-columns: 1.15fr .85fr;
-    gap: 56px;
-    margin-top: 44px;
+    gap: 42px;
+    margin-top: 34px;
     align-items: stretch;
   }
 
@@ -321,7 +321,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
     }
 
     .experience-section {
-      padding: 68px 0;
+      padding: 56px 0;
     }
 
     .experience-proof {
