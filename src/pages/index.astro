@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import HeroSection from "../components/home/HeroSection.astro";
@@ -14,16 +14,16 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
 ---
 
 <BaseLayout
-  title="KIPROD â€“ Strengthening Credit Risk. Building Resilient Institutions."
+  title="KIPROD – Strengthening Credit Risk. Building Resilient Institutions."
   description="KIPROD helps financial institutions understand capability gaps, strengthen governance, develop institutional capability, and support continuous performance improvement."
   activePath="/"
 >
 
-  <!-- 01 â€” HERO -->
+  <!-- 01 — HERO -->
   <HeroSection />
 
 
-  <!-- 02 â€” WHO WE SERVE -->
+  <!-- 02 — WHO WE SERVE -->
   <section class="institutional-strip">
     <div class="section-inner">
 
@@ -44,19 +44,19 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   </section>
 
 
-  <!-- 03 â€” THE KIPROD DIFFERENCE -->
+  <!-- 03 — THE KIPROD DIFFERENCE -->
   <WhyKiprod />
 
 
-  <!-- 04 â€” THE KIPROD ECOSYSTEM -->
+  <!-- 04 — THE KIPROD ECOSYSTEM -->
   <EcosystemSection />
 
 
-  <!-- 05 â€” CAPABILITY IN ACTION -->
+  <!-- 05 — CAPABILITY IN ACTION -->
   <ImpactGallery />
 
 
-  <!-- 06 â€” EXPERIENCE & INSTITUTIONAL RELEVANCE -->
+  <!-- 06 — EXPERIENCE & INSTITUTIONAL RELEVANCE -->
   <section class="experience-section">
 
     <div class="section-inner">
@@ -107,7 +107,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
             </div>
 
             <div>
-              AI-Driven Credit Risk
+              Credit Risk Analytics & Decision Intelligence
             </div>
 
           </div>
@@ -116,7 +116,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
             href="/institute"
             class="text-link"
           >
-            Explore Institutional Experience â†’
+            Explore Institutional Experience →
           </a>
 
         </div>
@@ -137,7 +137,7 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
             href="/about"
             class="btn-secondary"
           >
-            About KIPROD â†’
+            About KIPROD →
           </a>
 
         </div>
@@ -149,13 +149,13 @@ const featuredInsights = (await getPublishedInsights()).slice(0, 3);
   </section>
 
 
-  <!-- 07 â€” LATEST INSIGHTS -->
+  <!-- 07 — LATEST INSIGHTS -->
   <InsightsSection
     posts={featuredInsights}
   />
 
 
-  <!-- 08 â€” FINAL INSTITUTIONAL CTA -->
+  <!-- 08 — FINAL INSTITUTIONAL CTA -->
   <FinalPositioningSection />
 
 </BaseLayout>

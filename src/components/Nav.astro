@@ -1,31 +1,22 @@
 ---
-
-import CapabilityPlatformLink from './CapabilityPlatformLink.astro';
-
-const { activePath = '/' } = Astro.props;
+const { activePath = "/" } = Astro.props;
 
 const primaryLinks = [
   { href: "/", label: "Home" },
-
   { href: "/#approach", label: "Methodology" },
-
   { href: "/institute", label: "Institute" },
-
   { href: "/academy", label: "Academy" },
-
   { href: "/partnerships", label: "RMS" },
-
+  { href: "/command-centre", label: "Command Centre" },
   { href: "/insights", label: "Insights" },
-
-  { href: "/contact", label: "Contact" },
 ];
 
 const secondaryLinks = [
-  { href: "/partners", label: "Partners" },
+  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" },
   { href: "/resources", label: "Resources" },
   { href: "/media", label: "Media Centre" },
-  { href: "/command-centre", label: "Command Centre" },
-  { href: "/about", label: "About" },
+  { href: "/partners", label: "Partners" },
 ];
 
 const links = [...primaryLinks, ...secondaryLinks];
@@ -33,113 +24,59 @@ const links = [...primaryLinks, ...secondaryLinks];
 
 <nav class="site-nav">
   <a class="nav-logo" href="/" aria-label="KIPROD home">
-    <img
-      src="/assets/kiprod-logo-2026.png"
-      alt="KIPROD"
-      class="brand-logo-img"
-      loading="eager"
-      decoding="async"
-    />
+    <img src="/assets/kiprod-logo-2026.png" alt="KIPROD" class="brand-logo-img" loading="eager" decoding="async" />
   </a>
 
-  <!-- Desktop -->
-
   <ul class="nav-links">
-  {primaryLinks.map((l) => (
-    <li>
-      <a
-        href={l.href}
-        class={
-  activePath === l.href ||
-  (l.href === "/#approach" && activePath === "/")
-    ? "nav-link-active"
-    : undefined
-}
-      >
-        {l.label}
-      </a>
-    </li>
-  ))}
-  <li class="nav-more">
-    <button
-  class="nav-more-toggle"
-  type="button"
-  aria-haspopup="true"
-  aria-expanded="false"
-  aria-label="Open more navigation"
->More ▾</button>
-    <ul class="nav-more-menu">
-      {secondaryLinks.map((l) => (
-        <li>
-          <a
-            href={l.href}
-            class={activePath === l.href ? "nav-link-active" : undefined}
-          >
-            {l.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </li>
+    {primaryLinks.map((l) => (
+      <li>
+        <a href={l.href} class={activePath === l.href || (l.href === "/#approach" && activePath === "/") ? "nav-link-active" : undefined}>
+          {l.label}
+        </a>
+      </li>
+    ))}
 
-  <li>
-    <button
-  id="search-toggle"
-  class="nav-search-btn"
-  aria-label="Open search"
->
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="2"
-  >
-    <circle cx="11" cy="11" r="7"></circle>
-    <path d="M20 20l-3.5-3.5"></path>
-  </svg>
-</button>
-  </li>
+    <li class="nav-more">
+      <button class="nav-more-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Open more navigation">
+        More &#9662;
+      </button>
+      <ul class="nav-more-menu">
+        {secondaryLinks.map((l) => (
+          <li><a href={l.href} class={activePath === l.href ? "nav-link-active" : undefined}>{l.label}</a></li>
+        ))}
+      </ul>
+    </li>
+
+    <li>
+      <button id="search-toggle" class="nav-search-btn" aria-label="Open search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20l-3.5-3.5"></path>
+        </svg>
+      </button>
+    </li>
 
     <li class="nav-cta-wrapper">
-    <a href="/contact" class="nav-cta">
-  Start Your Institutional Assessment →
-</a>
-  </li>
-</ul>
+      <a href="/contact?assessment=ilca" class="nav-cta">Start Your Institutional Assessment &rarr;</a>
+    </li>
+  </ul>
 
-  <!-- Mobile hamburger -->
-
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- Mobile menu -->
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 
   <div class="mobile-menu">
-    <div class="mobile-search">
-      <input type="search" placeholder="Search KIPROD…" />
-    </div>
-
-<ul>
-  {
-    links.map((l) => (
-      <li>
-        <a
-  href={l.href}
-  class={activePath === l.href ? "nav-link-active" : undefined}
->
-  {l.label}
-</a>
-      </li>
-    ))
-  }
-
-  <li class="mobile-cta">
-    <a href="/contact">Start Your Institutional Assessment →</a>
-  </li>
-</ul>
-
+    <div class="mobile-search"><input type="search" placeholder="Search KIPROD..." /></div>
+    <ul>
+      {links.map((l) => (<li><a href={l.href} class={activePath === l.href ? "nav-link-active" : undefined}>{l.label}</a></li>))}
+      <li class="mobile-cta"><a href="/contact?assessment=ilca">Start Your Institutional Assessment &rarr;</a></li>
+    </ul>
   </div>
 </nav>
+
+<style>
+  .nav-logo .brand-logo-img { height: 51px; width: auto; }
+  @media (min-width: 1101px) and (max-width: 1320px) {
+    .nav-links { gap: 18px; }
+    .nav-links a, .nav-more-toggle { font-size: .8rem; }
+    .nav-cta { padding: 9px 13px; }
+  }
+</style>
