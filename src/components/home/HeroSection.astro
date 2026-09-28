@@ -1086,77 +1086,102 @@
 
 /* ============================================================
    KIPROD PERMANENT ALIGNMENT LOCK - HOMEPAGE HERO
+   Balanced, centred and deliberately asymmetrical.
    ============================================================ */
 
-/* Keep the full hero composition centred on the site spine */
 .kiprod-hero-inner {
-  width: min(1120px, calc(100% - 64px));
-  max-width: 1120px;
+  width: min(1200px, calc(100% - 64px));
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+
+  grid-template-columns:
+    minmax(0, 1.12fr)
+    minmax(420px, .88fr);
+
+  gap: 48px;
+  align-items: center;
 }
 
-/* Keep the content inside each panel away from the edges */
+.kiprod-hero-copy,
+.kiprod-hero-journey {
+  min-width: 0;
+}
+
 .kiprod-hero-copy-inner {
   width: 100%;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
+  margin: 0;
+  padding: clamp(36px, 3vw, 44px);
 }
 
-.kiprod-hero-copy h1,
+.kiprod-hero-copy h1 {
+  max-width: 100%;
+  font-size: clamp(3rem, 3.55vw, 3.9rem);
+  line-height: 1.035;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 .kiprod-hero-lead,
 .kiprod-hero-support {
   max-width: 100%;
 }
 
-/* Trust strip follows the same axis as the hero */
 .kiprod-hero-trust {
-  width: min(1060px, calc(100% - 64px));
+  width: min(1120px, calc(100% - 64px));
 }
 
-/* Tablet: do not let the single-column hero become an oversized edge-to-edge slab */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
+  .kiprod-hero {
+    padding: 72px 0 80px;
+  }
+
   .kiprod-hero-inner {
-    width: min(680px, calc(100% - 64px));
-    max-width: 680px;
-    gap: 26px;
+    width: min(760px, calc(100% - 56px));
+    max-width: 760px;
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .kiprod-hero-copy,
   .kiprod-hero-journey {
     width: 100%;
-    max-width: 680px;
+    max-width: 760px;
     justify-self: center;
   }
 
   .kiprod-hero-copy-inner {
-    max-width: 590px;
-    padding: 38px 40px;
+    padding: 38px 42px;
   }
 
   .kiprod-hero-copy h1 {
-    max-width: 550px;
-    font-size: clamp(2.8rem, 7vw, 3.55rem);
-    line-height: 1.03;
-    text-wrap: balance;
+    max-width: 620px;
+    font-size: clamp(2.8rem, 6.2vw, 3.55rem);
+    line-height: 1.04;
   }
 
   .kiprod-hero-lead,
   .kiprod-hero-support {
-    max-width: 550px;
+    max-width: 620px;
   }
 
   .kiprod-hero-trust {
-    width: min(680px, calc(100% - 64px));
+    width: min(760px, calc(100% - 56px));
   }
 }
 
-/* Mobile: equal gutters, controlled type, no content touching card edges */
 @media (max-width: 600px) {
+  .kiprod-hero {
+    padding: 46px 0 30px;
+  }
+
   .kiprod-hero-inner {
     width: calc(100% - 36px);
     max-width: none;
+    gap: 20px;
   }
 
   .kiprod-hero-copy,
@@ -1165,19 +1190,19 @@
   }
 
   .kiprod-hero-copy-inner {
-    max-width: none;
     padding: 26px 22px;
   }
 
   .kiprod-hero-copy h1 {
-    font-size: clamp(2.25rem, 10.8vw, 3rem);
-    line-height: 1.04;
-    text-wrap: balance;
+    max-width: 100%;
+    font-size: clamp(2.2rem, 10.4vw, 2.9rem);
+    line-height: 1.045;
   }
 
   .kiprod-hero-trust {
     width: calc(100% - 36px);
   }
 }
+
 
 </style>
