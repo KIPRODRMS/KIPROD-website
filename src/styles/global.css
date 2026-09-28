@@ -5143,3 +5143,101 @@ footer {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+
+/* ============================================================
+   KIPROD PERMANENT ALIGNMENT LOCK
+   One visual spine across desktop, tablet and mobile.
+   ============================================================ */
+
+:root {
+  --kiprod-shell: 1120px;
+  --kiprod-gutter: 32px;
+}
+
+/* Core content containers */
+.section-inner,
+.page-header-inner {
+  width: min(var(--kiprod-shell), calc(100% - (var(--kiprod-gutter) * 2))) !important;
+  max-width: var(--kiprod-shell) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Internal page hero content must visually sit on the same axis */
+.page-heading,
+.page-sub {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page-actions {
+  justify-content: center;
+}
+
+/* Grids/cards must never push outside their parent shell */
+.about-grid,
+.arms-grid,
+.institutional-inner,
+.solution-model,
+.impact-gallery,
+.download-grid,
+.trust-grid,
+.resource-grid,
+.gallery-grid,
+.category-grid {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.about-grid > *,
+.arms-grid > *,
+.institutional-inner > *,
+.solution-model > *,
+.impact-gallery > *,
+.download-grid > *,
+.trust-grid > *,
+.resource-grid > *,
+.gallery-grid > *,
+.category-grid > * {
+  min-width: 0;
+}
+
+/* Footer uses the exact same visual shell */
+.footer-inner {
+  width: min(var(--kiprod-shell), calc(100% - (var(--kiprod-gutter) * 2))) !important;
+  max-width: var(--kiprod-shell) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Keep nav content visually aligned with the same shell */
+nav.site-nav {
+  padding-left: max(var(--kiprod-gutter), calc((100vw - var(--kiprod-shell)) / 2)) !important;
+  padding-right: max(var(--kiprod-gutter), calc((100vw - var(--kiprod-shell)) / 2)) !important;
+}
+
+@media (max-width: 1184px) {
+  :root {
+    --kiprod-gutter: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --kiprod-gutter: 18px;
+  }
+
+  .section-inner,
+  .page-header-inner,
+  .footer-inner {
+    width: calc(100% - 36px) !important;
+  }
+
+  nav.site-nav {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}

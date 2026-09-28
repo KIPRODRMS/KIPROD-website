@@ -1084,4 +1084,100 @@
 
 }
 
+/* ============================================================
+   KIPROD PERMANENT ALIGNMENT LOCK - HOMEPAGE HERO
+   ============================================================ */
+
+/* Keep the full hero composition centred on the site spine */
+.kiprod-hero-inner {
+  width: min(1120px, calc(100% - 64px));
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Keep the content inside each panel away from the edges */
+.kiprod-hero-copy-inner {
+  width: 100%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kiprod-hero-copy h1,
+.kiprod-hero-lead,
+.kiprod-hero-support {
+  max-width: 100%;
+}
+
+/* Trust strip follows the same axis as the hero */
+.kiprod-hero-trust {
+  width: min(1060px, calc(100% - 64px));
+}
+
+/* Tablet: do not let the single-column hero become an oversized edge-to-edge slab */
+@media (max-width: 1000px) {
+  .kiprod-hero-inner {
+    width: min(680px, calc(100% - 64px));
+    max-width: 680px;
+    gap: 26px;
+  }
+
+  .kiprod-hero-copy,
+  .kiprod-hero-journey {
+    width: 100%;
+    max-width: 680px;
+    justify-self: center;
+  }
+
+  .kiprod-hero-copy-inner {
+    max-width: 590px;
+    padding: 38px 40px;
+  }
+
+  .kiprod-hero-copy h1 {
+    max-width: 550px;
+    font-size: clamp(2.8rem, 7vw, 3.55rem);
+    line-height: 1.03;
+    text-wrap: balance;
+  }
+
+  .kiprod-hero-lead,
+  .kiprod-hero-support {
+    max-width: 550px;
+  }
+
+  .kiprod-hero-trust {
+    width: min(680px, calc(100% - 64px));
+  }
+}
+
+/* Mobile: equal gutters, controlled type, no content touching card edges */
+@media (max-width: 600px) {
+  .kiprod-hero-inner {
+    width: calc(100% - 36px);
+    max-width: none;
+  }
+
+  .kiprod-hero-copy,
+  .kiprod-hero-journey {
+    max-width: none;
+  }
+
+  .kiprod-hero-copy-inner {
+    max-width: none;
+    padding: 26px 22px;
+  }
+
+  .kiprod-hero-copy h1 {
+    font-size: clamp(2.25rem, 10.8vw, 3rem);
+    line-height: 1.04;
+    text-wrap: balance;
+  }
+
+  .kiprod-hero-trust {
+    width: calc(100% - 36px);
+  }
+}
+
 </style>

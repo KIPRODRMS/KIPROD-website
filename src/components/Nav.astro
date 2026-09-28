@@ -79,4 +79,19 @@ const links = [...primaryLinks, ...secondaryLinks];
     .nav-links a, .nav-more-toggle { font-size: .8rem; }
     .nav-cta { padding: 9px 13px; }
   }
+
+/* ============================================================
+   KIPROD PERMANENT ALIGNMENT LOCK - NAV
+   ============================================================ */
+
+@media (min-width: 1101px) {
+  .nav-links {
+    gap: clamp(12px, 1.35vw, 20px);
+  }
+
+  .nav-logo .brand-logo-img {
+    height: 49px;
+  }
+}
+
 </style>
