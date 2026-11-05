@@ -20,6 +20,7 @@ const { Content } = await render(post);
   title={`${post.data.title} – KIPROD`}
   description={post.data.description}
   activePath="/insights"
+  articleDate={post.data.date.toISOString()}
 >
 
 <section class="about" style="padding-top:140px;">
