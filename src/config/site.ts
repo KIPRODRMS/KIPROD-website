@@ -1,5 +1,5 @@
 /** Production marketing site */
-export const SITE_URL = import.meta.env.PUBLIC_SITE_URL ?? "https://kiprodrisk.co.ke";
+export const SITE_URL = "https://www.kiprodrisk.co.ke";
 
 /** Custom capability platform (LMS) — live at coordinated launch */
 export const CAPABILITY_PLATFORM_URL =
