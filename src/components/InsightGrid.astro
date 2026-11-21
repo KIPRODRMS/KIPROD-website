@@ -25,3 +25,11 @@ const { posts, columns = 2, showTopic = true } = Astro.props;
     ))
   }
 </div>
+
+<style>
+  .insight-grid.insight-grid--3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; background:transparent; margin-top:18px; }
+  .insight-grid .download-card { display:flex; flex-direction:column; min-width:0; padding:24px 22px; border:1px solid rgba(9,34,74,.1); }
+  .insight-grid .download-card .arm-link { margin-top:auto; padding-top:12px; }
+  @media (max-width:900px) { .insight-grid.insight-grid--3 { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:600px) { .insight-grid.insight-grid--3 { grid-template-columns:1fr !important; } }
+</style>

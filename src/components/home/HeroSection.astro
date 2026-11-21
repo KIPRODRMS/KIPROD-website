@@ -46,10 +46,8 @@
         </div>
 
         <h1>
-          Strengthening
-          <em>Credit Risk.</em>
-          Building
-          <em>Resilient Institutions.</em>
+          <span class="hero-line">Strengthening <em>Credit Risk.</em></span>
+          <span class="hero-line">Building <em>Resilient Institutions.</em></span>
         </h1>
 
         <div class="kiprod-hero-rule"></div>
@@ -92,111 +90,36 @@
 
 
     <!-- ==============================================
-         RIGHT — DISCOVER / DEVELOP / SUSTAIN
+         RIGHT — INDEPENDENT ENGAGEMENT OPTIONS
     =============================================== -->
 
     <div class="kiprod-hero-journey">
-
       <div class="kiprod-journey-inner">
-
-        <div class="kiprod-journey-eyebrow">
-          Ways to Engage
-        </div>
-
-        <h2>
-          Your Priorities.
-          <span>Your Pathway.</span>
-        </h2>
-
+        <div class="kiprod-journey-eyebrow">Ways to Engage</div>
+        <h2>Your Priorities. <span>Your Pathway.</span></h2>
         <p class="kiprod-journey-description">
-          Engage KIPROD at the point that best fits your needs.
-          Structured assessment is available where broader
-          institutional insight would be valuable.
+          Choose the support that meets your institution's needs.
+          A structured assessment is available where deeper insight would add value.
         </p>
-
-
-        <!-- DISCOVER -->
-
-        <div class="kiprod-journey-step">
-
-          <div class="kiprod-step-number">
-            1
-          </div>
-
-          <div class="kiprod-step-content">
-
-            <strong>
-              Executive Conversation
-            </strong>
-
-            <span>
-              Discuss an institutional or executive priority
-            </span>
-
-          </div>
-
+        <div class="kiprod-engagement-options">
+          <a class="kiprod-engagement-option" href="/contact?interest=Executive%20Advisory">
+            <strong>Executive Conversation</strong>
+            <span>Discuss a governance, credit-risk or institutional priority</span>
+            <span class="option-action" aria-hidden="true">→</span>
+          </a>
+          <a class="kiprod-engagement-option" href="/academy">
+            <strong>Academy Programmes</strong>
+            <span>Explore targeted training and capability development</span>
+            <span class="option-action" aria-hidden="true">→</span>
+          </a>
+          <a class="kiprod-engagement-option" href="/contact">
+            <strong>Assessment &amp; Advisory</strong>
+            <span>Request a structured assessment or tailored implementation support</span>
+            <span class="option-action" aria-hidden="true">→</span>
+          </a>
         </div>
-
-
-        <div class="kiprod-step-arrow">
-          ↓
-        </div>
-
-
-        <!-- DEVELOP -->
-
-        <div class="kiprod-journey-step">
-
-          <div class="kiprod-step-number">
-            2
-          </div>
-
-          <div class="kiprod-step-content">
-
-            <strong>
-              Academy Programmes
-            </strong>
-
-            <span>
-              Access targeted training and capability development
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <div class="kiprod-step-arrow">
-          ↓
-        </div>
-
-
-        <!-- SUSTAIN -->
-
-        <div class="kiprod-journey-step">
-
-          <div class="kiprod-step-number">
-            3
-          </div>
-
-          <div class="kiprod-step-content">
-
-            <strong>
-              Assessment &amp; Advisory
-            </strong>
-
-            <span>
-              Explore assessment, advisory and execution support
-            </span>
-
-          </div>
-
-        </div>
-
       </div>
-
     </div>
-
   </div>
 
 
@@ -204,7 +127,7 @@
        TRUST STRIP
   ================================================= -->
 
-  <div class="kiprod-hero-trust">
+  <div class="kiprod-hero-trust" aria-label="Institutions and leadership groups we support">
 
     <div>
       Financial Institutions
@@ -483,6 +406,8 @@
 
 }
 
+
+ .kiprod-hero-copy h1 .hero-line { display: block; }
 
 .kiprod-hero-copy h1 em {
 
@@ -867,6 +792,14 @@
 
 }
 
+
+/* Independent ways to engage, not a numbered or compulsory sequence */
+.kiprod-engagement-options { display:grid; gap:12px; }
+.kiprod-engagement-option { position:relative; display:flex; flex-direction:column; gap:5px; padding:15px 44px 15px 17px; border:1px solid rgba(255,255,255,.16); border-left:3px solid var(--gold); border-radius:5px; background:rgba(255,255,255,.055); color:var(--white); text-decoration:none; transition:background .2s,border-color .2s; }
+.kiprod-engagement-option:hover,.kiprod-engagement-option:focus-visible { background:rgba(255,255,255,.13); border-color:var(--gold-light); }
+.kiprod-engagement-option strong { color:var(--white); font:600 1.14rem/1.18 var(--font-display); }
+.kiprod-engagement-option > span:not(.option-action) { color:rgba(255,255,255,.78); font:.78rem/1.5 var(--font-body); }
+.kiprod-engagement-option .option-action { position:absolute; right:18px; top:50%; transform:translateY(-50%); color:var(--gold-light); font-size:1.2rem; }
 
 /* =====================================================
    TRUST STRIP
